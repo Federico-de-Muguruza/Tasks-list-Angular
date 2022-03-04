@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap');
+
+/*General styles*/
+
+html {
+  font-family: 'Signika Negative', sans-serif; /*Solucionar error: no detecta la fuente*/
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #d4d4d4;
+}
+
+input[type=checkbox] {
+  transform: scale(1.5);
+}
+
+.line-through {
+  text-decoration: line-through;
+}
