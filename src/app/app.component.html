@@ -4,53 +4,20 @@
 
     <div class="task-box">
       <article class="add-option">
-        <input type="text">
-        <button>ADD</button>
+        <input type="text" #task>
+        <button (click)="addTask(task.value)">ADD</button>
       </article>
       
       <article class="task-list">
-        <div class="task">
-          <div>
-            <input type="checkbox">
-            <label>Task N</label>
+        <label *ngFor="let task of tasks">
+          <div class="task">
+            <div>
+              <input type="checkbox">
+              <span>{{task.description}}</span>
+            </div>
+            <fa-icon [icon]="faTrash" (click)="deleteTask(task)"></fa-icon>
           </div>
-          <fa-icon [icon]="faTrash"></fa-icon>
-        </div>
-        <div class="task">
-          <div>
-            <input type="checkbox">
-            <label>Task N-1</label>
-          </div>
-          <fa-icon [icon]="faTrash"></fa-icon>
-        </div>
-        <div class="task">
-          <div>
-            <input type="checkbox" checked>
-            <label class="line-through">Completed Task N-2</label>
-          </div>
-          <fa-icon [icon]="faTrash"></fa-icon>
-        </div>
-        <div class="task">
-          <div>
-            <input type="checkbox">
-            <label>Task K</label>
-          </div>
-          <fa-icon [icon]="faTrash"></fa-icon>
-        </div>
-        <div class="task">
-          <div>
-            <input type="checkbox">
-            <label>Task 2</label>
-          </div>
-          <fa-icon [icon]="faTrash"></fa-icon>
-        </div>
-        <div class="task">
-          <div>
-            <input type="checkbox" checked>
-            <label class="line-through">Completed Task 1</label>
-          </div>
-          <fa-icon [icon]="faTrash"></fa-icon>
-        </div>
+        </label>
       </article>
     </div>
   </section>
