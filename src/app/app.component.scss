@@ -1,5 +1,9 @@
 // Task-list styles
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 .column-align-center {
     display: flex;
     flex-direction: column;
@@ -19,6 +23,7 @@ section {
     max-height: 90vh;
     overflow-y: scroll;
 }
+
 
 .task-box {
     @extend .column-align-center;
@@ -62,10 +67,9 @@ section {
 
 .task {
     div {
-        width: 80%;
-    }
-
-    input {
-        margin-right: 0.5rem;
-    }
+        max-width: 80%;
+        min-width: 80%;
+        max-height: 10vh;
+        overflow-wrap: break-word;
+    }      
 }

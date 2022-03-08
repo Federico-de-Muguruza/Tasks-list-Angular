@@ -4,15 +4,15 @@
 
     <div class="task-box">
       <article class="add-option">
-        <input type="text" #task>
+        <input type="text" maxlength="100" #task>
         <button (click)="addTask(task.value)">ADD</button>
       </article>
       
       <article class="task-list">
         <label *ngFor="let task of tasks">
           <div class="task">
+            <input type="checkbox">
             <div>
-              <input type="checkbox">
               <span>{{task.description}}</span>
             </div>
             <fa-icon [icon]="faTrash" (click)="deleteTask(task)"></fa-icon>
