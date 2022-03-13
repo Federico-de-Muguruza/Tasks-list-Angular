@@ -1,0 +1,24 @@
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+label {
+    cursor: pointer;
+
+    .task {
+        @extend .space-between;
+        padding: 1rem;
+        border: 2px solid black;
+        margin-top: 1rem;
+    
+        div {
+            max-width: 80%;
+            min-width: 80%;
+            overflow-wrap: break-word;
+        }      
+    }
+}
+
+
+

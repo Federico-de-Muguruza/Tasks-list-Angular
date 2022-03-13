@@ -6,12 +6,20 @@ html {
   font-family: 'Signika Negative', sans-serif; /*Solucionar error: no detecta la fuente*/
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+h1, body, ul {
   margin: 0;
   padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
   height: 100vh;
   background-color: #d4d4d4;
 }

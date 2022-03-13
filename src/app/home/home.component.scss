@@ -1,0 +1,26 @@
+.column-align-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.home {
+    width: 33vw;
+}
+
+.task-box {
+    @extend .column-align-center;
+
+    app-add-task {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+.task-list {
+    width: 100%;
+}

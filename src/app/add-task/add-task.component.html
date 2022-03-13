@@ -1,0 +1,6 @@
+<article class="add-option">
+    <input type="text" maxlength="100" #task 
+        (keyup.enter)="addTask(task.value)"
+        [(ngModel)]="description">
+    <button (click)="addTask(task.value)">ADD</button>
+</article>

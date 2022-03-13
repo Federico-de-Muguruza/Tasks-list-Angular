@@ -1,0 +1,20 @@
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    background: #584b4f;
+    font-size: 1.2rem;
+    padding: 1.2rem;
+    
+    a {
+        color: #efeae1;
+    }
+
+    ul {
+        width: 10vw;
+        @extend .space-between
+    }
+}

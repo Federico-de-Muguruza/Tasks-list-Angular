@@ -1,0 +1,9 @@
+    <label (click)="completeTask(task)">
+        <div class="task">
+            <input type="checkbox">
+            <div>
+            <span>{{task.description}}</span>
+            </div>
+            <fa-icon [icon]="faTrash" (click)="deleteTask(task)"></fa-icon>
+        </div>
+    </label>
