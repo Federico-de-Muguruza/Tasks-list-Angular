@@ -2,7 +2,7 @@
         <div class="task">
             <input type="checkbox">
             <div>
-            <span>{{task.description}}</span>
+                <span [ngClass]="task.completed ? 'line-through' : ''">{{task.description}}</span>
             </div>
             <fa-icon [icon]="faTrash" (click)="deleteTask(task)"></fa-icon>
         </div>

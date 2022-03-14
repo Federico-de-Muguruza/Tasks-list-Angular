@@ -26,5 +26,4 @@ export class AddTaskComponent implements OnInit {
     this.description = '';
     this.newTask.emit(task);
   }
-
 }

@@ -20,13 +20,11 @@ export class TaskComponent implements OnInit {
   }
 
   deleteTask(task: Task): void {
-    console.log(task);
     this.deletedTask.emit(task);
   }
 
   completeTask(task: Task): void {
     (task.completed === true) ? task.completed = false : task.completed = true;
-    console.log(task);
     this.updatedTask.emit(task);
   }
 }
