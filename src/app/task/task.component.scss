@@ -1,27 +1,49 @@
-.space-between {
-    display: flex;
-    justify-content: space-between;
-}
-
-label {
-    cursor: pointer;
-
-    .task {
-        @extend .space-between;
-        padding: 1rem;
-        border: 2px solid black;
-        margin-top: 1rem;
-    
-        div {
-            max-width: 80%;
-            min-width: 80%;
-            overflow-wrap: break-word;
-        }      
-    }
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 .line-through {
     text-decoration: line-through;
+}
+
+.task {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    margin-top: 1rem;
+    background:rgba(34,34,34,0.1);
+
+    .description {
+        width: 55%;
+        overflow-wrap: break-word;
+
+        span {
+            font-size: 24px;
+        }
+    }    
+
+    input[type=checkbox] {
+        width: 25px;
+        height: 25px;
+        margin: 0;
+        border: 2px solid #bcbcbc;
+    } 
+
+    app-button-bar {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .task {
+        .description {
+            width: 40%;
+        }
+
+        app-button-bar {
+            width: 45%;
+        }
+    }
 }
 
 

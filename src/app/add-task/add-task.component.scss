@@ -1,20 +1,35 @@
-.space-between {
+.add-option {
     display: flex;
     justify-content: space-between;
-}
-
-.add-option {
-    @extend .space-between;
-    
-    input, button {
-        padding: 1rem;
-    }
-    
-    button {
-        cursor: pointer;
-    }
+    background:rgba(34,34,34,0.1);
+    padding: 8px;
     
     input {
-        width: 75%;
+        width: 80%;
+        font-size: 24px;
+        padding: 8px;
+        background: transparent;
+        border: none;
+        
+        &:focus {
+            outline: 1px solid red; 
+        }
+    }
+
+    button {
+        cursor: pointer;
+        background: transparent;
+        padding: 16px;
+        border: 1px solid rgba(34,34,34,0.5);
+        height: 48px;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .add-option {
+        input {
+            width: 70%;
+        }
     }
 }

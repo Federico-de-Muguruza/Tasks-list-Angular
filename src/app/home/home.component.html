@@ -1,9 +1,11 @@
 <div class="home">
-    <h1>LISTA DE TAREAS DE FEDE</h1>
+    <app-header></app-header>
     
     <div class="task-box">
       <app-add-task (newTask)="addTask($event)"></app-add-task>
     
+      <app-divider></app-divider>
+
       <article class="task-list">
         <app-task *ngFor="let t of tasks" [task]="t" (deletedTask)="deleteTask($event)" (updatedTask)="completeTask($event)"></app-task>
       </article>

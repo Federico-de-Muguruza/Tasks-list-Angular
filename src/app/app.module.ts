@@ -7,8 +7,10 @@ import { TaskComponent } from './task/task.component';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
-import { DefaultComponent } from './default/default.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { DividerComponent } from './divider/divider.component';
+import { HeaderComponent } from './header/header.component';
+import { IconButtonComponent } from './icon-button/icon-button.component';
+import { ButtonBarComponent } from './button-bar/button-bar.component';
 
 @NgModule({
   declarations: [
@@ -16,8 +18,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     TaskComponent,
     AddTaskComponent,
     HomeComponent,
-    DefaultComponent,
-    NavbarComponent,
+    DividerComponent,
+    HeaderComponent,
+    IconButtonComponent,
+    ButtonBarComponent,
   ],
   imports: [
     BrowserModule,

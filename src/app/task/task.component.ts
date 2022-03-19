@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faTrash, faShare, faBook } from '@fortawesome/free-solid-svg-icons';
 import { Task } from '../../interfaces/Task';
 
 @Component({
@@ -8,7 +8,9 @@ import { Task } from '../../interfaces/Task';
   styleUrls: ['./task.component.scss']
 })
 export class TaskComponent implements OnInit {
-  faTrash = faTrash;
+  "faTrash" = faTrash;
+  "faShare" = faShare;
+  "faBook" = faBook;
 
   @Input() task: Task = {description: '', completed: false};
   @Output() deletedTask = new EventEmitter<Task>();

@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 /*General styles*/
 
 html {
-  font-family: 'Signika Negative', sans-serif; /*Solucionar error: no detecta la fuente*/
+  font-family: 'Roboto Negative', sans-serif; /*Solucionar error: no detecta la fuente*/
 }
 
 h1, body, ul {
@@ -17,14 +17,4 @@ li {
 
 a {
   text-decoration: none;
-}
-
-body {
-  height: 100vh;
-  background-color: #d4d4d4;
-}
-
-input[type=checkbox] {
-  transform: scale(1.5);
-  cursor: pointer;
 }

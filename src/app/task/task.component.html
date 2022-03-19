@@ -1,9 +1,17 @@
-    <label (click)="completeTask(task)">
-        <div class="task">
-            <input type="checkbox">
-            <div>
-                <span [ngClass]="task.completed ? 'line-through' : ''">{{task.description}}</span>
-            </div>
-            <fa-icon [icon]="faTrash" (click)="deleteTask(task)"></fa-icon>
-        </div>
-    </label>
+<div class="task" (click)="completeTask(task)">
+    <input type="checkbox" [checked]="task.completed">
+    <div class="description">
+        <span [ngClass]="task.completed ? 'line-through' : ''">{{task.description}}</span>
+    </div>
+    <app-button-bar>
+        <app-icon-button>
+            <fa-icon [icon]="faBook"></fa-icon>
+        </app-icon-button>
+        <app-icon-button>
+            <fa-icon [icon]="faShare"></fa-icon>
+        </app-icon-button>
+        <app-icon-button (click)="deleteTask(task)">
+            <fa-icon [icon]="faTrash"></fa-icon>
+        </app-icon-button>
+    </app-button-bar>
+</div>

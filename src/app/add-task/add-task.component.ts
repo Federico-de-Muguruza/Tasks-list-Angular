@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { Task } from '../../interfaces/Task'
 
 @Component({
@@ -7,6 +8,7 @@ import { Task } from '../../interfaces/Task'
   styleUrls: ['./add-task.component.scss']
 })
 export class AddTaskComponent implements OnInit {
+  "faCheck" = faCheck;
 
   @Output() newTask = new EventEmitter<Task>();
   description: string = '';
@@ -19,7 +21,7 @@ export class AddTaskComponent implements OnInit {
   addTask(description: string): void {
     if (description.trim() === '') return;
 
-    const task = {
+    const task: Task = {
       description,
       completed: false
     }
