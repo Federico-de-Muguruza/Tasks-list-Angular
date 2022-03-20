@@ -1,5 +1,5 @@
 <div class="task" (click)="completeTask(task)">
-    <input type="checkbox" [checked]="task.completed">
+    <app-input-checkbox [task]="task"></app-input-checkbox>
     <div class="description">
         <span [ngClass]="task.completed ? 'line-through' : ''">{{task.description}}</span>
     </div>

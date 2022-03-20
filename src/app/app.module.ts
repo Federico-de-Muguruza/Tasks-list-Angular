@@ -11,6 +11,7 @@ import { DividerComponent } from './divider/divider.component';
 import { HeaderComponent } from './header/header.component';
 import { IconButtonComponent } from './icon-button/icon-button.component';
 import { ButtonBarComponent } from './button-bar/button-bar.component';
+import { InputCheckboxComponent } from './input-checkbox/input-checkbox.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ButtonBarComponent } from './button-bar/button-bar.component';
     HeaderComponent,
     IconButtonComponent,
     ButtonBarComponent,
+    InputCheckboxComponent,
   ],
   imports: [
     BrowserModule,

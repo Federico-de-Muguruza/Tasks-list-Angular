@@ -1,20 +1,12 @@
+@use '../../assets/scss/display';
+
 .home {
     margin: 5% auto;
     width: 40vw;
 }
 
 .task-box {
-    display: flex;
-    flex-direction: column;
-
-    app-add-task {
-        z-index: 1;
-        backdrop-filter: blur(10px);
-        width: 100%;
-        margin: 16px 0px 16px 0px;
-        position: sticky;
-        top: 1rem;
-    }
+    @include display.column;
 }
 
 .task-list {

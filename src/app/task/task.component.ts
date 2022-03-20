@@ -12,7 +12,7 @@ export class TaskComponent implements OnInit {
   "faShare" = faShare;
   "faBook" = faBook;
 
-  @Input() task: Task = {description: '', completed: false};
+  @Input() task = {} as Task;
   @Output() deletedTask = new EventEmitter<Task>();
   @Output() updatedTask = new EventEmitter<Task>();
 

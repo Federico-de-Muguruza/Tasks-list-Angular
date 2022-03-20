@@ -1,35 +1,47 @@
-.add-option {
-    display: flex;
-    justify-content: space-between;
-    background:rgba(34,34,34,0.1);
-    padding: 8px;
-    
-    input {
-        width: 80%;
-        font-size: 24px;
-        padding: 8px;
-        background: transparent;
-        border: none;
-        
-        &:focus {
-            outline: 1px solid red; 
-        }
-    }
+@use '../../assets/scss/display';
+@use '../../assets/scss/variables';
 
-    button {
-        cursor: pointer;
-        background: transparent;
-        padding: 16px;
-        border: 1px solid rgba(34,34,34,0.5);
-        height: 48px;
-        border-radius: 5px;
+:host {
+    backdrop-filter: blur(10px);
+    width: 100%;
+    margin: 16px 0px 16px 0px;
+    position: sticky;
+    top: 1rem;
+
+    form {
+        @include display.space-between;
+        background: variables.$black01;
+        padding: 8px;
+        
+        input {
+            width: 80%;
+            font-size: 24px;
+            padding: 8px;
+            background: transparent;
+            border: none;
+            
+            &:focus {
+                outline: 1px solid red; 
+            }
+        }
+    
+        button {
+            background: variables.$transparent;
+            cursor: pointer;
+            padding: 16px;
+            border: 1px solid rgba(34,34,34,0.5);
+            height: 48px;
+            border-radius: 5px;
+        }
     }
 }
 
 @media screen and (max-width: 600px) {
-    .add-option {
-        input {
-            width: 70%;
+    :host {
+        form {
+            input {
+                width: 70%;
+            }
         }
     }
 }

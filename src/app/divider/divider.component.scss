@@ -1,6 +1,8 @@
+@use '../../assets/scss/variables';
+
 hr {
+    background: variables.$black01;
     border: none;
     height: 2px;
-    background:rgba(34,34,34,0.1);
     margin: 0;
 }

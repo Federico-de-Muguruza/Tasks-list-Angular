@@ -1,8 +1,10 @@
+@use '../../assets/scss/variables';
+
 button {
     cursor: pointer;
     background: transparent;
     padding: 16px;
-    border: 1px solid rgba(34,34,34,0.5);
+    border: 1px solid variables.$black02;
     height: 48px;
     border-radius: 5px;
 }

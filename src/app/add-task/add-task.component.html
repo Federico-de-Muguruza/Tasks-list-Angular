@@ -1,8 +1,6 @@
-<form class="add-option" (ngSubmit)="addTask(task.value)" action="">
-    <input type="text" maxlength="100" #task [(ngModel)]="description" name="description">
-    <!-- <app-icon-button> -->
-    <button>
+<form (ngSubmit)="addTask(task.value)" action="">
+    <input type="text" maxlength="100" #task [(ngModel)]="description" name="description" autocomplete="off">
+    <app-icon-button>
         <fa-icon [icon]="faCheck"></fa-icon>
-    </button>
-    <!-- </app-icon-button> -->
+    </app-icon-button>
 </form>

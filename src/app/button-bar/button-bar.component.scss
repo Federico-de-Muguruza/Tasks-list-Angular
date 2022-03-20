@@ -1,13 +1,15 @@
-.button-bar {
-    display: flex;
-    justify-content: space-around;
+@use '../../assets/scss/display';
 
-    // button { 
-    //     cursor: pointer;
-    //     background: transparent;
-    //     padding: 16px;
-    //     border: 1px solid rgba(34,34,34,0.5);
-    //     height: 48px;
-    //     border-radius: 5px;
-    // }
+:host {
+    width: 35%;
+
+    .button-bar {
+        @include display.space-between;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    :host {
+        width: 45%;
+    }
 }
