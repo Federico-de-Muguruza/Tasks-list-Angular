@@ -3,6 +3,7 @@
 .home {
     margin: 5% auto;
     width: 40vw;
+    max-width: 512px;
 }
 
 .task-box {
@@ -16,5 +17,7 @@
 @media screen and (max-width: 600px) {
     .home {
         width: 95vw;
+        padding-left: 24px;
+        padding-right: 24px;
     }
 }

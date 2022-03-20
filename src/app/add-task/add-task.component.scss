@@ -7,14 +7,16 @@
     margin: 16px 0px 16px 0px;
     position: sticky;
     top: 1rem;
-
+    
     form {
         @include display.space-between;
+        border-radius: variables.$radius4px;
         background: variables.$black01;
         padding: 8px;
         
         input {
-            width: 80%;
+            font-family: 'Roboto', sans-serif;
+            width: 85%;
             font-size: 24px;
             padding: 8px;
             background: transparent;
@@ -23,15 +25,6 @@
             &:focus {
                 outline: 1px solid red; 
             }
-        }
-    
-        button {
-            background: variables.$transparent;
-            cursor: pointer;
-            padding: 16px;
-            border: 1px solid rgba(34,34,34,0.5);
-            height: 48px;
-            border-radius: 5px;
         }
     }
 }

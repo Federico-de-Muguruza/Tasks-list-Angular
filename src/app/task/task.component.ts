@@ -26,7 +26,7 @@ export class TaskComponent implements OnInit {
   }
 
   completeTask(task: Task): void {
-    (task.completed === true) ? task.completed = false : task.completed = true;
+    task.completed = ! task.completed;
     this.updatedTask.emit(task);
   }
 }

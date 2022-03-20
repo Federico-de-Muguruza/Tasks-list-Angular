@@ -1,6 +1,5 @@
 @use '../../assets/scss/display';
 @use '../../assets/scss/variables';
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 .line-through {
     text-decoration: line-through;
@@ -8,9 +7,10 @@
 
 .task {
     @include display.space-between;
-    background: variables.$black01;
-    cursor: pointer;
     align-items: center;
+    background: variables.$black01;
+    border-radius: variables.$radius4px;
+    cursor: pointer;
     padding: 8px;
     margin-top: 1rem;
 
