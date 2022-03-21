@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import { Task } from '../../interfaces/Task';
+import { Task } from '../../../interfaces/Task';
 
 @Component({
   selector: 'app-add-task',

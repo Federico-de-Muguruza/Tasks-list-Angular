@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { faTrash, faShare, faBook } from '@fortawesome/free-solid-svg-icons';
-import { Task } from '../../interfaces/Task';
+import { Task } from '../../../interfaces/Task';
 
 @Component({
   selector: 'app-task',

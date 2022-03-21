@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Task } from '../../interfaces/Task';
+import { Task } from '../../../interfaces/Task';
 
 @Component({
   selector: 'app-input-checkbox',
