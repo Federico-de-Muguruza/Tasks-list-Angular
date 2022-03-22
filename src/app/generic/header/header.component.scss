@@ -1,3 +1,9 @@
+@use '../../../assets/scss/display';
+
+header {
+    @include display.space-between-centered;
+}
+
 h1 {
     font-size: 36px;
 }

@@ -1,6 +1,9 @@
 <div class="home">
     <app-header>
       LISTA DE TAREAS DE FEDE
+      <app-icon-button (click)="fullScreen()" header-icon>
+        <fa-icon [icon]="faExpand"></fa-icon>
+      </app-icon-button>
     </app-header>
     
     <div class="task-box">

@@ -6,8 +6,7 @@
 }
 
 .task {
-    @include display.space-between;
-    align-items: center;
+    @include display.space-between-centered;
     background: variables.$black01;
     border-radius: variables.$radius4px;
     cursor: pointer;

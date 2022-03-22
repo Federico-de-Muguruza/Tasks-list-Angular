@@ -3,6 +3,11 @@
     justify-content: space-between;
 }
 
+@mixin space-between-centered {
+    @include space-between;
+    align-items: center;
+}
+
 @mixin column {
     display: flex;
     flex-direction: column;
@@ -10,5 +15,6 @@
 
 @mixin align-center {
     display: flex;
+    justify-content: center;
     align-items: center;
 }
