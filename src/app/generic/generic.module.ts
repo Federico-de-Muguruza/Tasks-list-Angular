@@ -1,5 +1,7 @@
+// Modules
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+// Components
 import { DividerComponent } from './divider/divider.component';
 import { IconButtonComponent } from './icon-button/icon-button.component';
 import { InputCheckboxComponent } from './input-checkbox/input-checkbox.component';

@@ -1,6 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { faExpand } from '@fortawesome/free-solid-svg-icons';
-import { Task } from '../../interfaces/Task';
+import { Task } from '../../../interfaces/Task';
+import { LocalStorageService } from '../local-storage.service';
+import { ScreenService } from '../screen.service';
 
 @Component({
   selector: 'app-home',
@@ -12,25 +14,23 @@ export class HomeComponent implements OnInit {
 
   tasks: Task[] = [];
 
-  constructor() { }
+  constructor(private localStorage: LocalStorageService,
+              private screen: ScreenService) { }
   
   ngOnInit(): void {
-    if ( ! localStorage.getItem('tasks'))
-    localStorage.setItem('tasks', JSON.stringify([]));
-
-    this.tasks = JSON.parse(localStorage.getItem('tasks') || '[{}]');
+    this.tasks = this.localStorage.get('tasks');
   }
   
   addTask(task: Task): void {
     this.tasks.unshift(task);
-    localStorage.setItem('tasks', JSON.stringify(this.tasks));
+    this.localStorage.save('tasks', this.tasks);
   }
 
   deleteTask(task: Task): void {
     const index = this.tasks.indexOf(task);
     if (index > -1) {
       this.tasks.splice(index, 1);
-      localStorage.setItem('tasks', JSON.stringify(this.tasks));
+      this.localStorage.save('tasks', this.tasks);
     }
   }
 
@@ -38,14 +38,11 @@ export class HomeComponent implements OnInit {
     const index = this.tasks.indexOf(task);
     if (index > -1) {
       this.tasks.splice(index, 1, task);
-      localStorage.setItem('tasks', JSON.stringify(this.tasks));
+      this.localStorage.save('tasks', this.tasks);
     }
   }
 
   fullScreen() {
-    if ( ! document.fullscreenElement) 
-      document.documentElement.requestFullscreen(); 
-    else 
-      document.exitFullscreen();
+    this.screen.fullScreen();
   }
 }
