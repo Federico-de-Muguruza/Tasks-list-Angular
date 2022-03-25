@@ -4,7 +4,7 @@
 :host {
     backdrop-filter: blur(10px);
     width: 100%;
-    margin: 16px 0px 16px 0px;
+    margin-top: 1.6rem;
     position: sticky;
     top: 1rem;
     
@@ -12,28 +12,18 @@
         @include display.space-between;
         border-radius: variables.$radius4px;
         background: variables.$black01;
-        padding: 8px;
+        padding: .8rem;
         
         input {
             font-family: 'Roboto', sans-serif;
+            font-size: 2.4rem;
+            padding: .8rem;
             width: 85%;
-            font-size: 24px;
-            padding: 8px;
-            background: transparent;
+            background: variables.$transparent;
             border: none;
             
             &:focus {
-                outline: 1px solid red; 
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 600px) {
-    :host {
-        form {
-            input {
-                width: 70%;
+                outline: .1rem solid red; 
             }
         }
     }

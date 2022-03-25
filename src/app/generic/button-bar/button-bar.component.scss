@@ -1,8 +1,6 @@
 @use '../../../assets/scss/display';
 
 :host {
-    width: 35%;
-
     .button-bar {
         @include display.space-between;
     }
@@ -10,6 +8,8 @@
 
 @media screen and (max-width: 600px) {
     :host {
-        width: 45%;
+        .button-bar {
+            @include display.column;
+        }
     }
 }
