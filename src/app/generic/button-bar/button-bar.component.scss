@@ -5,11 +5,3 @@
         @include display.space-between;
     }
 }
-
-@media screen and (max-width: 600px) {
-    :host {
-        .button-bar {
-            @include display.column;
-        }
-    }
-}
