@@ -5,12 +5,12 @@ import { Injectable } from '@angular/core';
 })
 export class ScreenService {
 
-  constructor() { }
+    constructor() { }
 
-  fullScreen() {
-    if ( ! document.fullscreenElement) 
-      document.documentElement.requestFullscreen();
-    else 
-      document.exitFullscreen();
-  }
+    fullScreen() {
+        if ( ! document.fullscreenElement) 
+            document.documentElement.requestFullscreen();
+        else 
+            document.exitFullscreen();
+    }
 }

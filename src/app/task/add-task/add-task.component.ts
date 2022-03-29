@@ -8,24 +8,27 @@ import { Task } from '../../../interfaces/Task';
   styleUrls: ['./add-task.component.scss']
 })
 export class AddTaskComponent implements OnInit {
-  "faCheck" = faCheck;
+    "faCheck" = faCheck;
 
-  @Output() newTask = new EventEmitter<Task>();
-  description: string = '';
+    @Output() newTask = new EventEmitter<Task>();
+    DESCRIPTION_MAX_LENGTH = 25;
+    description!: string;
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit(): void {
-  }
-
-  addTask(description: string): void {
-    if (description.trim() === '') return;
-
-    const task: Task = {
-      description,
-      completed: false
+    ngOnInit(): void {
     }
-    this.description = '';
-    this.newTask.emit(task);
-  }
+
+    addTask(description: string): void {
+        if (description.trim() === ''
+            || description.length > this.DESCRIPTION_MAX_LENGTH)
+                return;
+
+        const task: Task = {
+          description,
+          completed: false
+        }
+        this.description = '';
+        this.newTask.emit(task);
+    }
 }

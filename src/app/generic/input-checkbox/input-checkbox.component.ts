@@ -8,11 +8,10 @@ import { Task } from '../../../interfaces/Task';
 })
 export class InputCheckboxComponent implements OnInit {
 
-  @Input() task = {} as Task;
+    @Input() task!: Task;
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit(): void {
-  }
-
+    ngOnInit(): void {
+    }
 }

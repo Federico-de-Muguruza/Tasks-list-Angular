@@ -1,14 +1,14 @@
 <div class="task" (click)="completeTask(task)">
     <app-input-checkbox [task]="task"></app-input-checkbox>
     <div class="description">
-        <span [ngClass]="task.completed ? 'line-through' : ''">{{task.description}}</span>
+        <p [ngClass]="task.completed ? 'line-through' : ''">{{task.description}}</p>
     </div>
     <app-button-bar>
         <app-icon-button>
-            <fa-icon [icon]="faBook"></fa-icon>
+            <fa-icon [icon]="faClipboard"></fa-icon>
         </app-icon-button>
         <app-icon-button>
-            <fa-icon [icon]="faShare"></fa-icon>
+            <fa-icon [icon]="faShareAlt"></fa-icon>
         </app-icon-button>
         <app-icon-button (click)="deleteTask(task)">
             <fa-icon [icon]="faTrash"></fa-icon>

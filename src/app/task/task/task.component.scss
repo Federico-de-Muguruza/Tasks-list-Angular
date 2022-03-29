@@ -12,15 +12,15 @@
     cursor: pointer;
     padding: .8rem;
     margin-bottom: 1rem;
-
+    
     .description {
         width: 55%;
         margin-left: .8rem;
-        text-overflow: ellipsis;
-        overflow: hidden;
-
-        span {
-            font-size: 2.4rem;
+        font-size: 2.4rem;
+        
+        p {
+            text-overflow: ellipsis;
+            overflow: hidden;    
         }
     }   
 }

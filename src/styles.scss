@@ -1,13 +1,18 @@
+@use './assets/scss/variables';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-/*General styles*/
-
 html {
-  font-family: 'Roboto', sans-serif;
   font-size: 62.5%; // 10px
 }
 
-h1, body, ul {
+html, input {
+  font-family: variables.$font;
+}
+
+h1,
+body,
+ul,
+p {
   margin: 0;
   padding: 0;
 }

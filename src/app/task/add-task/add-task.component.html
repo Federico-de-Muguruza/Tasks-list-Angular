@@ -1,5 +1,5 @@
 <form (ngSubmit)="addTask(task.value)" action="">
-    <input type="text" maxlength="100" #task [(ngModel)]="description" name="description" autocomplete="off">
+    <input type="text" maxlength="{{DESCRIPTION_MAX_LENGTH}}" #task [(ngModel)]="description" name="description" autocomplete="off">
     <app-icon-button>
         <fa-icon [icon]="faCheck"></fa-icon>
     </app-icon-button>

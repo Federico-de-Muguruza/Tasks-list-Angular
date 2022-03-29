@@ -6,13 +6,13 @@ import { Task } from '../../interfaces/Task';
 })
 export class LocalStorageService {
 
-  constructor() { }
+    constructor() { }
 
-  save(key: string, tasks: Task[]): void {
-    localStorage.setItem(key, JSON.stringify(tasks));
-  }
+    save(key: string, tasks: Task[]): void {
+        localStorage.setItem(key, JSON.stringify(tasks));
+    }
 
-  get(key: string) {
-    return JSON.parse(localStorage.getItem(key) || '[]');
-  }
+    get(key: string) {
+        return JSON.parse(localStorage.getItem(key) || '[]');
+    }
 }
